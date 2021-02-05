@@ -20,6 +20,7 @@ for file in filenames:
         for line in reader:
             words = line.rstrip().replace('\u200c', '').split(' ')
             words.append("e")
+            words.insert(0, "s")
             for i in range(len(words)):
                 # one gram frequency
                 frqOne = oneGram[Poet[name]].get(words[i], 0)
@@ -32,27 +33,30 @@ for file in filenames:
                 previous = "s"
                 if 0 <= i - 1 < len(words):
                     previous = words[i - 1]
-                pair = (current, previous)
-                frqBi = biGram[Poet[name]].get(pair, 0)
-                frqBi += 1
-            biGram[Poet[name]][pair] = frqBi
+                    pair = (current, previous)
+                    frqBi = biGram[Poet[name]].get(pair, 0)
+                    frqBi += 1
+                    biGram[Poet[name]][pair] = frqBi
 
-for poet in oneGram:
-    delete = [key for key in poet if poet[key] < 2]
-    for key in delete:
-        del poet[key]
+
+# for poet in biGram:
+#     delete = [key for key in poet if poet[key] < 2]
+#     for key in delete:
+#         del poet[key]
 
 for poet in biGram:
-    delete = [key for key in poet if poet[key] < 2]
-    for key in delete:
-        del poet[key]
-
-for poet in oneGram:
     size = len(poet)
     for key in poet:
-        poet[key] /= size
+        poet[key] /= oneGram[biGram.index(poet)].get(key[1], 1)
 
-for poet in biGram:
+
+
+for poet in oneGram:
+    delete = [key for key in poet if poet[key] < 2]
+    for key in delete:
+        del poet[key]
+
+for poet in oneGram:
     size = len(poet)
     for key in poet:
         poet[key] /= size
@@ -71,6 +75,7 @@ with open(file, 'r', encoding="utf-8") as reader:
             poetType = int(line.split('\t')[0])
             words = line.split('\t')[1].rstrip().replace('\u200c', '').split(' ')
             words.append("e")
+            words.insert(0, "s")
             # print(words)
             for i in range(len(words)):
                 frqOne = oneGram[poet].get(words[i], 0)
@@ -79,14 +84,16 @@ with open(file, 'r', encoding="utf-8") as reader:
                 previous = "s"
                 if 0 <= i - 1 < len(words):
                     previous = words[i - 1]
-                pair = (current, previous)
-                frqBi = biGram[poet].get(pair, 0)
+                    pair = (current, previous)
+                    frqBi = biGram[poet].get(pair, 0)
 
                 probability[poet] *= (frqBi * landa[2] + frqOne * landa[1] + landa[0] * e)
-        calculated = next(name for name, value in vars(Poet).items() if value == probability.index(max(probability)))
+        calculated = next(
+            name for name, value in vars(Poet).items() if value == probability.index(max(probability)))
         real = next(name for name, value in vars(Poet).items() if value == poetType - 1)
+
         print("real: {}     calculated: {}    =>   {}".format(real, calculated,
-                                                       probability.index(max(probability)) + 1 == poetType))
+                                                              probability.index(max(probability)) + 1 == poetType))
         all += 1
         if probability.index(max(probability)) + 1 == poetType:
             correct += 1
