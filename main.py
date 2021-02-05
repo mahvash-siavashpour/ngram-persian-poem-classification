@@ -85,8 +85,8 @@ with open(file, 'r', encoding="utf-8") as reader:
                 probability[poet] *= (frqBi * landa[2] + frqOne * landa[1] + landa[0] * e)
         calculated = next(name for name, value in vars(Poet).items() if value == probability.index(max(probability)))
         real = next(name for name, value in vars(Poet).items() if value == poetType - 1)
-        # print("real: {}     calculated: {}    =>   {}".format(real, calculated,
-        #                                                probability.index(max(probability)) + 1 == poetType))
+        print("real: {}     calculated: {}    =>   {}".format(real, calculated,
+                                                       probability.index(max(probability)) + 1 == poetType))
         all += 1
         if probability.index(max(probability)) + 1 == poetType:
             correct += 1
