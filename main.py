@@ -14,7 +14,6 @@ _, _, filenames = next(walk(directory))
 oneGram = [{}, {}, {}]
 biGram = [{}, {}, {}]
 for file in filenames:
-    # print(file)
     name = file.split('_')[0]
     with open(directory + file, 'r', encoding="utf-8") as reader:
         for line in reader:
@@ -39,29 +38,28 @@ for file in filenames:
                     biGram[Poet[name]][pair] = frqBi
 
 
-# for poet in biGram:
-#     delete = [key for key in poet if poet[key] < 2]
-#     for key in delete:
-#         del poet[key]
-
 for poet in biGram:
     size = len(poet)
     for key in poet:
-        poet[key] /= oneGram[biGram.index(poet)].get(key[1], 1)
-
-
+        poet[key] /= oneGram[biGram.index(poet)].get(key[1], size)
 
 for poet in oneGram:
     delete = [key for key in poet if poet[key] < 2]
     for key in delete:
         del poet[key]
 
-for poet in oneGram:
-    size = len(poet)
-    for key in poet:
-        poet[key] /= size
+length = [0 for i in range(3)]
+for i in range(3):
+    length[i] = 0
+    for poet in oneGram:
+        for key in poet:
+            length[i] += poet[key]
 
-landa = [0.05, 0.05, 0.9]
+for poet in oneGram:
+    for key in poet:
+        poet[key] /= length[oneGram.index(poet)]
+
+landa = [0.05, 0.45, 0.5]
 e = 0.00001
 
 file = 'test_set/test_file.txt'
@@ -97,5 +95,6 @@ with open(file, 'r', encoding="utf-8") as reader:
         all += 1
         if probability.index(max(probability)) + 1 == poetType:
             correct += 1
+
 
 print("Accuracy: {}".format(correct * 100 / all))
