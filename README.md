@@ -15,5 +15,3 @@ You can see an example here:<br>
 <br>
 => molavi<br>
 
-<h3>License<h3>
- d
