@@ -17,5 +17,3 @@ You can see an example here:<br>
 
 <h3>License<h3>
  d
-<h3>Acknowledgments<h3>
- - [ngrams](https://en.wikipedia.org/wiki/N-gram)
