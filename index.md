@@ -1,8 +1,19 @@
-## Welcome to GitHub Pages
+<h1>NLP-Persian-Poets</h1>
+<h3>How to use</h3>
+1. place your test file in /test_set (include persian poems in persian and their known poets as numbers) <br>
+(1: ferdowsi, 2: hafez, 3: molavi) <br>
+3. run main.py <br>
 
-You can use the [editor on GitHub](https://github.com/mahvash-siavashpour/NLP-Persian-Poets/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<h3>How it works</h3>
+This code uses some train sets to learn the n-grams (n=1, 2). These train sets each include the poems from a specific poet. Then the code uses these n-grams in a back-off model to predict the poets of each poem. It also provides some accuracy for the model. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<h3>Results and Conclusion</h3>
+The code managed to predict 85% of the poets correctly. <br>
+You can see an example here:<br>
+<br>3	تا خدایش باز صاف و خوش کند
+<br>3	آنکه تیره کرد هم صافش کند
+<br>
+=> molavi
 
 ### Markdown
 
