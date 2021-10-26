@@ -15,5 +15,8 @@ You can see an example here:<br>
 <br>
 => molavi
 
+<h3>License<h3>
+Distributed under the MIT License. See LICENSE for more information.
+
 <h3>Acknowledgments<h3>
- - [n-grams](https://en.wikipedia.org/wiki/N-gram)
+ - [ngrams](https://en.wikipedia.org/wiki/N-gram)
