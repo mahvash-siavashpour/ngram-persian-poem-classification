@@ -13,9 +13,9 @@ You can see an example here:<br>
 <br>3	تا خدایش باز صاف و خوش کند
 <br>3	آنکه تیره کرد هم صافش کند
 <br>
-=> molavi
+=> molavi<br>
 
 <h3>License<h3>
-D
+ d
 <h3>Acknowledgments<h3>
  - [ngrams](https://en.wikipedia.org/wiki/N-gram)
