@@ -16,4 +16,4 @@ You can see an example here:<br>
 => molavi
 
 <h3>Acknowledgments<h3>
- - [n-grams](https://en.wikipedia.org/wiki/N-gram)
+ - (n-grams, (https://en.wikipedia.org/wiki/N-gram))
