@@ -12,4 +12,5 @@ The code managed to predict 85% of the poets correctly. <br>
 You can see an example here:<br>
 <br>3	تا خدایش باز صاف و خوش کند
 <br>3	آنکه تیره کرد هم صافش کند
+<br>
 => molavi
