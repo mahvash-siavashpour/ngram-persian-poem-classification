@@ -17,12 +17,29 @@ You can see an example here:<br>
 
 
 <h2> Back-Off Model<h2>
+### Markdown
+
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
 ```markdown
+Syntax highlighted code block
 landa = [0.05, 0.45, 0.5]
 e = 0.00001
 probability[poet] *= (frqBi * landa[2] + frqOne * landa[1] + landa[0] * e)
-```
+# Header 1
+## Header 2
+### Header 3
 
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
 
 ### Support or Contact
 
