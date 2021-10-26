@@ -16,25 +16,5 @@ You can see an example here:<br>
 => molavi
 
 
-<h2> Back-Off Model<h2>
-```markdown
-1. landa = [0.05, 0.45, 0.5]
-2. e = 0.00001
-3. probability[poet] *= (frqBi * landa[2] + frqOne * landa[1] + landa[0] * e)
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
 
 
