@@ -16,7 +16,6 @@ You can see an example here:<br>
 => molavi
 
 <h3>License<h3>
-Distributed under the MIT License. See LICENSE for more information.
-
+D
 <h3>Acknowledgments<h3>
  - [ngrams](https://en.wikipedia.org/wiki/N-gram)
