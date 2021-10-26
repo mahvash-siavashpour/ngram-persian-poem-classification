@@ -19,9 +19,9 @@ You can see an example here:<br>
 <h2> Back-Off Model<h2>
 
 ```markdown
-landa = [0.05, 0.45, 0.5]
-e = 0.00001
-probability[poet] *= (frqBi * landa[2] + frqOne * landa[1] + landa[0] * e)
+1. landa = [0.05, 0.45, 0.5]
+2. e = 0.00001
+3. probability[poet] *= (frqBi * landa[2] + frqOne * landa[1] + landa[0] * e)
 
 ```
 
