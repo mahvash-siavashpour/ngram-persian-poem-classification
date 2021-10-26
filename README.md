@@ -1,4 +1,9 @@
-# NLP-Persian-Poets
-In this project I tried to use NLP methods for categorizing different types of texts into 3 sets. one for each of the poets. 
-I used a dataset that cointains the poems written by 3 different poets. By the use of the training dataset I created a unigram and a bigram model that I used these models to guess 
-the poets of the test dataset. And by changing the coefficients of the back-off model I reached to the accuracy of above 85%.
+<h1>HNLP-Persian-Poets</h1>
+<h3>How to use</h3>
+1. place your test file in /test_set (include persian poems)
+2. run main.py
+
+<h3>How it works</h3>
+This code uses some train sets to learn the n-grams (n=1, 2). These train sets each include the poems from a specific poet. Then the code uses these n-grams in a back-off model to predict the test poems. It also provides some accuracy for the model.
+
+
