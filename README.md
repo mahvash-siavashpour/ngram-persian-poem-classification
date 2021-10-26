@@ -14,3 +14,6 @@ You can see an example here:<br>
 <br>3	آنکه تیره کرد هم صافش کند
 <br>
 => molavi
+
+<h3>Acknowledgments<h3>
+ - [n-grams](https://en.wikipedia.org/wiki/N-gram)
